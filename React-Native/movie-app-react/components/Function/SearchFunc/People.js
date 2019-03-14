@@ -52,11 +52,11 @@ class People extends Component {
                         return (
                             <View key={i} style={styles.mainContainer}>
                                 <View> 
-                                    <Image style={{width: 150, height: 150, resizeMode: 'cover'}} source={{uri: `https://image.tmdb.org/t/p/original/${result.profile_path}`}} />
+                                    <Image style={{width: 150, height: 150, resizeMode: 'contain'}} source={{uri: `https://image.tmdb.org/t/p/original/${result.profile_path}`}} />
                                 </View>
                                 <View style={{paddingLeft: 10, width: 0, flexGrow: 1}}>
                                     <Text style={styles.mainTitle}>{result.name}</Text>
-                                    <Text style={{fontSize: 15}} numberOfLines={4} ellipsizeMode='tail'>{result.known_for[0].overview}</Text>
+                                    <Text style={{fontSize: 16}} numberOfLines={3} ellipsizeMode='tail'>{result.known_for[0].overview}</Text>
                                 </View>
                             </View>
                         )
@@ -84,9 +84,12 @@ const styles = StyleSheet.create({
         maxWidth: '100%',
     },
     mainTitle: {
-        fontSize: 23,
+        fontSize: 22,
         fontWeight: '700',
         marginBottom: 5,
+        fontFamily: 'Baskerville',
+        color: '#2f71b7'
+
     }
 })
 
