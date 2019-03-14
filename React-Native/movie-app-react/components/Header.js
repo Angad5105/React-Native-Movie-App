@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     header: {
         display: 'flex',
         alignItems: 'center',
-        height: '8%',
+        height: '10%',
         backgroundColor: '#2f71b7',
         paddingTop: 20
     },
